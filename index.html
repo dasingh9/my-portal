@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            margin:0px;
+        }
+        .page {
+            display: flex;
+        }
+        .left-panel {
+            height: 100vh;
+            width: 300px;
+            background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+        }
+        .right-panel {
+            flex: auto;
+        }
+        .logo {
+            background-color: tomato;
+            height: 50px;
+            background-image: url("./sample1.PNG");
+        }
+        .left-menu {
+
+            font-size: x-large;
+            font-family: sans-serif;
+        }
+        .menu-item {
+            padding: 10px;
+        }
+        .menu-item > a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu-item > a:hover {
+            text-decoration: underline;
+        }
+
+        .top-menu-bar {
+            height: 60px;
+            background-color: #eceaf1;
+        }
+        
+        .top-menu-bar > a {
+            text-decoration: none;
+            margin: 20px;
+            font-family: sans-serif;
+        }
+        .content {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="page">
+        <div class="left-panel">
+            <div class="logo">The Leaders</div>
+            <div class="left-menu">
+                <div class="menu-item">
+                    <a href="/">Home</a>
+                </div>
+                <div class="menu-item"><a href="#contact-us">Contact Us</a></div>
+                <div class="menu-item"><a href="#complaints">Complaints</a></div>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="top-menu-bar">
+                <a href="/">Home</a>
+                <a href="/">Contact us</a>
+                <a href="/">Home</a>
+                <a href="/">Home</a>
+            </div>
+            <div class="content">
+                My contents
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
