@@ -25,9 +25,9 @@
             background-image: url("./sample1.PNG");
         }
         .left-menu {
-
-            font-size: x-large;
+            font-size: large;
             font-family: sans-serif;
+            margin: 20px;
         }
         .menu-item {
             padding: 10px;
@@ -44,6 +44,8 @@
         .top-menu-bar {
             height: 60px;
             background-color: #eceaf1;
+            display: flex;
+            justify-content: flex-end;
         }
         
         .top-menu-bar > a {
@@ -55,6 +57,26 @@
             padding: 10px;
         }
     </style>
+
+    <script>
+        window.onload = function() {
+            changeResultBgColor();
+            const records = fetchProducts();
+            showRecordsInHtmlTable(records);
+        }
+
+        function changeResultBgColor() {
+            document.getElementById("result").style.backgroundColor = "red";
+        }
+        
+        function fetchProducts() {
+            // make http request to your API
+        }
+
+        function showRecordsInHtmlTable() {
+            //write JS code to show data in HTMl table
+        }
+    </script>
 </head>
 <body>
     
@@ -73,15 +95,28 @@
             <div class="top-menu-bar">
                 <a href="/">Home</a>
                 <a href="/">Contact us</a>
-                <a href="/">Home</a>
-                <a href="/">Home</a>
+                <a href="/">More...</a>
                 <a href="/logout.html">Logout</a>
             </div>
             <div class="content">
-                My contents
+
+                Number 1: <input type="number" id="num1"/> <br/>
+                Number 2: <input type="number" id="num2"/><br>
+                <h1>
+                <span id="result" style="font-size: x-large; color: green; ">
+                </span>
+                </h1>
+                <br>
+
+                <button onclick="addNumbers()">Add</button>
+                <button onclick="multiplyNumbers()">Multiply</button>
+
+
             </div>
         </div>
     </div>
-
+    <script src="./arithmetic-calculator.js"> 
+    </script>
+   
 </body>
 </html>
