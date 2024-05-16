@@ -4,60 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link href="./css/page-layout.css" rel="stylesheet" />
     <style>
-        body {
-            margin:0px;
-        }
-        .page {
-            display: flex;
-        }
-        .left-panel {
-            height: 100vh;
-            width: 300px;
-            background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
-        }
-        .right-panel {
-            flex: auto;
-        }
-        .logo {
-            background-color: tomato;
-            height: 50px;
-            background-image: url("./sample1.PNG");
-        }
-        .left-menu {
-            font-size: large;
-            font-family: sans-serif;
-            margin: 20px;
-        }
-        .menu-item {
-            padding: 10px;
-        }
-        .menu-item > a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .menu-item > a:hover {
-            text-decoration: underline;
-        }
-
-        .top-menu-bar {
-            height: 60px;
-            background-color: #eceaf1;
-            display: flex;
-            justify-content: flex-end;
-        }
-        
-        .top-menu-bar > a {
-            text-decoration: none;
-            margin: 20px;
-            font-family: sans-serif;
-        }
-        .content {
-            padding: 10px;
+        .input-control {
+            margin-top: 10px;
         }
     </style>
-
     <script>
         window.onload = function() {
             changeResultBgColor();
@@ -66,7 +18,7 @@
         }
 
         function changeResultBgColor() {
-            document.getElementById("result").style.backgroundColor = "red";
+            document.getElementById("result").style.backgroundColor = "#fdfbe9";
         }
         
         function fetchProducts() {
@@ -99,11 +51,14 @@
                 <a href="/logout.html">Logout</a>
             </div>
             <div class="content">
-
-                Number 1: <input type="number" id="num1"/> <br/>
-                Number 2: <input type="number" id="num2"/><br>
+                <div class="input-control">
+                    Number 1: <input type="number" id="num1"/> <br/>
+                </div>
+                <div class="input-control">
+                    Number 2: <input type="number" id="num2"/><br>
+                </div>
                 <h1>
-                <span id="result" style="font-size: x-large; color: green; ">
+                Result: <span id="result" style="font-size: x-large; color: green; ">
                 </span>
                 </h1>
                 <br>
