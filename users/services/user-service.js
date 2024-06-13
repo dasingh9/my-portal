@@ -50,10 +50,10 @@ import { UserDao } from '../dao/user-dao.js'
 
 export class UserService {
 
-    //https://reqres.in/api/users
+    //dependency injection
     constructor(userDao) {
-        this.users = [];
         this.userDao = userDao;
+        this.users = [];
     }
 
     async getUsers() {
