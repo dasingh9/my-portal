@@ -30,10 +30,24 @@
 
             document.getElementById("clock24hrs").textContent = time;
             document.getElementById("clock12hrs").textContent = time12hrs;
+            count++;
+            if(count == 5)
+                clearTimeout(timerId);
         }
+
+        let timerId = null;
+        let count = 0;
         window.onload = function () {
-            setInterval(showCurrentTime, 1000);
+            timerId = setInterval(showCurrentTime, 1000);
         }
+        function stopTimer() {
+            clearInterval(timerId);
+        }
+
+        function startTimer() {
+            timerId = setInterval(showCurrentTime, 1000);
+        }
+
     </script>
 </head>
 
@@ -41,6 +55,11 @@
     <div id="clock24hrs" class="clock">
     </div>
     <div id="clock12hrs" class="clock">
+    </div>
+    <div>
+        <br>
+        <button onclick="stopTimer()" >Stop</button>
+        <button onclick="startTimer()">Start</button>
     </div>
 </body>
 
